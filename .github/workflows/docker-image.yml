@@ -31,8 +31,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            name/app
-            ghcr.io/username/app
+            ${{ secrets.DOCKERHUB_USERNAME }}/p-service            
           # generate Docker tags based on the following events/attributes
           tags: |            
             type=sha
@@ -43,4 +42,4 @@ jobs:
           context: ./services/patient
           file: ./services/patient/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/p-service:${{ steps.meta.outputs.tags }}
+          tags: {{ steps.meta.outputs.tags }}          
