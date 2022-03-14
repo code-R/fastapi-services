@@ -29,4 +29,4 @@ jobs:
       with:        
         context: ./services/patient/             
         push: true
-        tags: mven/p-service:$(date +%s)
+        tags: mven/p-service:latest
