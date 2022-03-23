@@ -9,4 +9,4 @@ def ping():
     Returns:
         [dict]: [success response for health check]
     """
-    return {"response": "Hello from patient service v1 !!"}
+    return {"response": "Hello from patient service v1 !!!!!"}
